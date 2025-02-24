@@ -38,19 +38,19 @@
                                     <button type="button" class="btn btn-info btn-sm" 
                                             data-bs-toggle="modal" 
                                             data-bs-target="#showModal{{ $category->id }}">
-                                        View
+                                            <i class="fas fa-eye"></i>
                                     </button>
                                     <button type="button" class="btn btn-primary btn-sm" 
                                             data-bs-toggle="modal" 
                                             data-bs-target="#editModal{{ $category->id }}">
-                                        Edit
+                                            <i class="fas fa-edit"></i>
                                     </button>
                                     <form action="{{ route('categories.destroy', $category) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm" 
                                                 onclick="return confirm('Are you sure you want to delete?')">
-                                            Delete
+                                                <i class="fas fa-trash"></i>
                                         </button>
                                     </form>
                                 </td>

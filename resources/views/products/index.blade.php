@@ -37,17 +37,17 @@
                                 <td>${{ number_format($product->price, 2) }}</td>
                                 <td>{{ $product->category->name }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#showModal{{ $product->id }}">
-                                        View
+                                    <button type="button" class="btn btn-link text-info p-0 me-2" data-bs-toggle="modal" data-bs-target="#showModal{{ $product->id }}" title="View">
+                                        <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModal{{ $product->id }}">
-                                        Edit
+                                    <button type="button" class="btn btn-link text-primary p-0 me-2" data-bs-toggle="modal" data-bs-target="#editModal{{ $product->id }}" title="Edit">
+                                        <i class="fas fa-edit"></i>
                                     </button>
                                     <form action="{{ route('products.destroy', $product->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">
-                                            Delete
+                                        <button type="submit" class="btn btn-link text-danger p-0" onclick="return confirm('Are you sure?')" title="Delete">
+                                            <i class="fas fa-trash"></i>
                                         </button>
                                     </form>
                                 </td>
