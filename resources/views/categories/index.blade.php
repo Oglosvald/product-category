@@ -24,6 +24,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Products Count</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -32,6 +33,7 @@
                             <tr>
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->name }}</td>
+                                <td>{{ $category->products->count() }}</td>
                                 <td>
                                     <button type="button" class="btn btn-info btn-sm" 
                                             data-bs-toggle="modal" 
@@ -137,6 +139,9 @@
                 </div>
                 <div class="mb-3">
                     <strong>Name:</strong> {{ $category->name }}
+                </div>
+                <div class="mb-3">
+                    <strong>Products Count:</strong> {{ $category->products->count() }}
                 </div>
                 <div class="mb-3">
                     <strong>Created at:</strong> {{ $category->created_at->format('d/m/Y H:i:s') }}
